@@ -1,0 +1,26 @@
+### Swift dependencies file v0 ###
+provides:
+- "FirstViewController"
+nominals:
+- "C8ToDo_App19FirstViewController"
+class-members:
+top-level:
+- "UITableViewCell"
+- "UITableView"
+- !private "=="
+- "UITableViewDataSource"
+- "UITableViewDelegate"
+- "NSIndexPath"
+- "Int"
+- "UITableViewCellEditingStyle"
+- "UIViewController"
+- "Bool"
+- !private "taskMgr"
+member-access:
+- "C8ToDo_App19FirstViewController"
+dynamic-lookup:
+cross-module:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/CoreGraphics.swiftmodule"
