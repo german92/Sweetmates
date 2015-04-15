@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Tasks-->
@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="400" y="-303"/>
         </scene>
-        <!--View Controller-->
+        <!--Status Select View Controller-->
         <scene sceneID="A6e-Jp-2FV">
             <objects>
-                <viewController id="4OD-XG-LMq" sceneMemberID="viewController">
+                <viewController id="4OD-XG-LMq" customClass="StatusSelectViewController" customModule="ToDo_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wJt-mN-b0C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,6 +68,9 @@
                                 <state key="normal" title="Studying">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="4OD-XG-LMq" eventType="touchUpInside" id="CYu-pC-gRH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HM8-Ke-j6S">
                                 <rect key="frame" x="193" y="126" width="83" height="30"/>
@@ -95,6 +98,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="q8l-Ox-lJw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="studyStatus" destination="OF1-Uc-yWV" id="zEv-pg-vbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFW-7i-HvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
