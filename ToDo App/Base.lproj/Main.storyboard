@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Tasks-->
@@ -33,7 +33,7 @@
             </objects>
             <point key="canvasLocation" x="400" y="-303"/>
         </scene>
-        <!--Status Select View Controller-->
+        <!--Status-->
         <scene sceneID="A6e-Jp-2FV">
             <objects>
                 <viewController id="4OD-XG-LMq" customClass="StatusSelectViewController" customModule="ToDo_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,12 +48,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aLK-OZ-U0V">
+                                <rect key="frame" x="83" y="77" width="154" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L4r-Hm-oNo">
-                                <rect key="frame" x="44" y="216" width="125" height="30"/>
+                                <rect key="frame" x="40" y="216" width="125" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Friend(s) Over">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeFriendOverStatus:" destination="4OD-XG-LMq" eventType="touchUpInside" id="CgX-tz-l24"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xUZ-jh-WhE">
                                 <rect key="frame" x="211" y="216" width="46" height="30"/>
@@ -61,6 +71,9 @@
                                 <state key="normal" title="Busy">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeBusyStatus:" destination="4OD-XG-LMq" eventType="touchUpInside" id="gfA-LU-9I3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OF1-Uc-yWV">
                                 <rect key="frame" x="66" y="126" width="81" height="30"/>
@@ -85,6 +98,9 @@
                                 <state key="normal" title="Available">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeAvailableStatus:" destination="4OD-XG-LMq" eventType="touchUpInside" id="YSF-Xl-alM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ekr-y6-xMF">
                                 <rect key="frame" x="49" y="303" width="115" height="30"/>
@@ -92,13 +108,46 @@
                                 <state key="normal" title="Exam Tomorrow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeExamStatus:" destination="4OD-XG-LMq" eventType="touchUpInside" id="wTQ-v7-BBv"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="egw-gQ-K3z">
+                                <rect key="frame" x="44" y="71" width="116" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UFT-7r-jRz">
+                                <rect key="frame" x="193" y="126" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sleeping">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSleepingStatus:" destination="4OD-XG-LMq" eventType="touchUpInside" id="lJ1-ar-aNA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="37M-16-ycO">
+                                <rect key="frame" x="171" y="71" width="133" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.15294118225574493" green="0.7725490927696228" blue="0.18823531270027161" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="q8l-Ox-lJw"/>
+                    <tabBarItem key="tabBarItem" title="Status" image="first" id="q8l-Ox-lJw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="availableStatus" destination="9nW-bI-3wS" id="cgD-G6-Lwa"/>
+                        <outlet property="busyStatus" destination="xUZ-jh-WhE" id="9cN-jC-kFB"/>
+                        <outlet property="currentStatus" destination="37M-16-ycO" id="f6w-Mb-hiI"/>
+                        <outlet property="examStatus" destination="Ekr-y6-xMF" id="Onq-un-0Uf"/>
+                        <outlet property="friendOverStatus" destination="L4r-Hm-oNo" id="Lil-zz-NoX"/>
+                        <outlet property="sleepStatus" destination="HM8-Ke-j6S" id="eAo-7L-YTt"/>
                         <outlet property="studyStatus" destination="OF1-Uc-yWV" id="zEv-pg-vbn"/>
                     </connections>
                 </viewController>
