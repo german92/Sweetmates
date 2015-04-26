@@ -210,7 +210,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="340"/>
+            <point key="canvasLocation" x="400" y="337"/>
+        </scene>
+        <!--LogIn-->
+        <scene sceneID="XSD-35-WKS">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6Z-vs-PrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="TpH-PJ-PYK" customClass="LogInViewController" customModule="ToDo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iP7-Jf-Myn" customClass="LogInViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="LogIn" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="VQH-mM-PRZ">
+                                <rect key="frame" x="124" y="34" width="91" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LogIn" image="first" id="R7V-PE-wRh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="784" y="337"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -226,6 +252,7 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="4OD-XG-LMq" kind="relationship" relationship="viewControllers" id="KZy-2t-dHH"/>
+                        <segue destination="TpH-PJ-PYK" kind="relationship" relationship="viewControllers" id="Czy-i7-w0I"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

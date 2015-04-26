@@ -3,7 +3,7 @@
 //  ToDo App
 //
 //  Created by Jake Wayne on 4/15/15.
-//  Copyright (c) 2015 Ostaszynski & Rehmann. All rights reserved.
+//  Copyright (c) 2015 Doshi & Ostaszynski. All rights reserved.
 //
 
 import UIKit
